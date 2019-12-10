@@ -11,10 +11,10 @@ EJERCICIO 1.4
   
 - Una vez ejecutado y ver que funciona correctamente empezamos hacer variaciones en el programa.
 
-- Variamos el color del circulo de detección; tanto el exterior como el interior.
+- Variamos el color del circulo de detección; tanto el exterior como el interior y el grueso del mismo
 
-    cv::circle(image, center, 9, cv::Scalar(0,0,0), -1, 8, 0 );// circle center in black
-    cv::circle(image, center, radius, cv::Scalar(0,128,128), 3, 8, 0 );// circle perimeter in green
+    cv::circle(image, center, 9, cv::Scalar(0,0,0), -1, 18, 0 );// circle center in black
+    cv::circle(image, center, radius, cv::Scalar(0,128,128), 13, 18, 0 );// circle perimeter in green
     
 - Se puede variar también las constantes: ( tamaño de detección, bordes, distancia,...)
 
