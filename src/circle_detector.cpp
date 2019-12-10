@@ -11,13 +11,13 @@
 
 //constants
 const int GAUSSIAN_BLUR_SIZE = 7;
-const double GAUSSIAN_BLUR_SIGMA = 2;
+const double GAUSSIAN_BLUR_SIGMA = 4;
 const double CANNY_EDGE_TH = 150;
-const double HOUGH_ACCUM_RESOLUTION = 2;
-const double MIN_CIRCLE_DIST = 40;
-const double HOUGH_ACCUM_TH = 70;
-const int MIN_RADIUS = 20;
-const int MAX_RADIUS = 100;
+const double HOUGH_ACCUM_RESOLUTION = 3;
+const double MIN_CIRCLE_DIST = 100;
+const double HOUGH_ACCUM_TH = 60;
+const int MIN_RADIUS = 25;
+const int MAX_RADIUS = 55;
 
 int main(int argc, char *argv[])
 {
@@ -85,8 +85,8 @@ int main(int argc, char *argv[])
             {
                     center = cv::Point(cvRound(circles[ii][0]), cvRound(circles[ii][1]));
                     radius = cvRound(circles[ii][2]);
-                    cv::circle(image, center, 5, cv::Scalar(0,0,255), -1, 8, 0 );// circle center in green
-                    cv::circle(image, center, radius, cv::Scalar(0,0,255), 3, 8, 0 );// circle perimeter in red
+                    cv::circle(image, center, 9, cv::Scalar(0,0,0), -1, 18, 0 );// circle center in black
+                    cv::circle(image, center, radius, cv::Scalar(0,128,128), 13, 18, 0 );// circle perimeter in green
             }
         }
 
